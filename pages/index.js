@@ -24,12 +24,54 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>FocalTimer</title>
+        <title>FocalTasks — Your All In One Productivity Suite</title>
+        <meta
+          name="title"
+          content="FocalTasks — Your All In One Productivity Suite"
+        />
+        <meta
+          name="description"
+          content="Create to-do lists, share tasks, and level up your productivity."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.focaltasks.com/" />
+        <meta
+          property="og:title"
+          content="FocalTasks — Your All In One Productivity Suite"
+        />
+        <meta
+          property="og:description"
+          content="Create to-do lists, share tasks, and level up your productivity."
+        />
+        <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.focaltasks.com/" />
+        <meta
+          property="twitter:title"
+          content="FocalTasks — Your All In One Productivity Suite"
+        />
+        <meta
+          property="twitter:description"
+          content="Create to-do lists, share tasks, and level up your productivity."
+        />
+        <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
       </Head>
       <Navbar />
       <div className="mx-auto mt-16 w-full max-w-6xl px-4 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
           <div className="mx-auto flex flex-col items-center text-center lg:basis-2/5 lg:items-start lg:text-left">
+            <div className="-ml-1 mb-8 hidden rounded-md bg-white leading-5 ring-2 ring-gray-200 sm:inline-flex">
+              <span className="inline-flex gap-2 p-1.5">
+                <span className="-m-0.5 flex items-center rounded-md bg-accent px-1.5 text-xs font-semibold text-white">
+                  BETA
+                </span>
+                <span className="font-medium tracking-tight text-gray-700">
+                  FocalTasks is entering beta starting August 1st.
+                </span>
+              </span>
+            </div>
             <h1 className="text-4xl font-bold leading-[40px] tracking-tighter sm:text-5xl sm:leading-[54px]">
               Your{" "}
               <span className="text-accent underline decoration-accent/50 underline-offset-2">
@@ -69,7 +111,7 @@ export default function Home() {
           </div>
           <div className="basis-1 md:basis-3/5">
             <Image
-              src="/focaltimer-small.png"
+              src="/focaltasks-small.png"
               width={808}
               height={594}
               alt=""
