@@ -12,3 +12,7 @@
     font-family: "Inter", sans-serif;
   }
 }
+
+.feature-grid div {
+  @apply hover:shadow-xl hover:border-accent shadow-none transition-all hover:scale-[1.025];
+}

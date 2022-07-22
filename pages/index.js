@@ -6,6 +6,7 @@ import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../config/firebase";
 import { nanoid } from "nanoid";
+import Features from "../components/Features";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -59,7 +60,7 @@ export default function Home() {
         <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
       </Head>
       <Navbar />
-      <div className="mx-auto mt-16 w-full max-w-6xl px-4 md:px-8">
+      <div className="mx-auto mt-16 w-full max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
           <div className="mx-auto flex flex-col items-center text-center lg:basis-2/5 lg:items-start lg:text-left">
             <div className="-ml-1 mb-8 hidden rounded-md bg-white leading-5 ring-2 ring-gray-200 sm:inline-flex">
@@ -68,7 +69,7 @@ export default function Home() {
                   BETA
                 </span>
                 <span className="font-medium tracking-tight text-gray-700">
-                  FocalTasks is entering beta starting August 1st.
+                  FocalTasks is currently in private beta.
                 </span>
               </span>
             </div>
@@ -118,6 +119,8 @@ export default function Home() {
             />
           </div>
         </div>
+        <hr className="my-12 h-0.5 border-0 bg-gray-200" />
+        <Features />
       </div>
     </>
   );
