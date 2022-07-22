@@ -7,6 +7,7 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../config/firebase";
 import { nanoid } from "nanoid";
 import Features from "../components/Features";
+import Script from "next/script";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -59,6 +60,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
       </Head>
+      <Script async src="https://cdn.splitbee.io/sb.js" />
       <Navbar />
       <div className="mx-auto mt-16 w-full max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
