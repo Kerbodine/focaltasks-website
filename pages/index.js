@@ -1,14 +1,15 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
 import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../config/firebase";
 import { nanoid } from "nanoid";
-import Features from "../components/features";
+import Features from "../components/Features";
 import Script from "next/script";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
+import FAQ from "../components/Faq";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -61,7 +62,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
       </Head>
-      {/* <Script async src="https://cdn.splitbee.io/sb.js" /> */}
+      <Script async src="https://cdn.splitbee.io/sb.js" />
       <Navbar />
       <div className="mx-auto mt-16 w-full max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
@@ -126,6 +127,7 @@ export default function Home() {
         </div>
         <hr className="my-16 h-0.5 border-0 bg-gray-200" />
         <Features />
+        <FAQ />
         <Footer email={email} setEmail={setEmail} />
       </div>
     </>
