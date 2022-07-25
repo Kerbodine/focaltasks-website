@@ -1,13 +1,14 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Image from "next/image";
 import { useState } from "react";
 import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../config/firebase";
 import { nanoid } from "nanoid";
-import Features from "../components/Features";
+import Features from "../components/features";
 import Script from "next/script";
+import Footer from "../components/footer";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -60,7 +61,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
       </Head>
-      <Script async src="https://cdn.splitbee.io/sb.js" />
+      {/* <Script async src="https://cdn.splitbee.io/sb.js" /> */}
       <Navbar />
       <div className="mx-auto mt-16 w-full max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
@@ -88,12 +89,14 @@ export default function Home() {
               Discover how to supercharge your productivity today.
             </p>
             <div className="mt-8 flex gap-4">
-              <form className="flex" onSubmit={handleSubmit}>
+              <form className="relative flex" onSubmit={handleSubmit}>
+                <div className="absolute -top-12" id="waitlist"></div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  autoComplete="email"
                   placeholder="Enter your best email..."
                   className="h-12 w-48 rounded-l-lg border-2 border-r-0 border-gray-200 pl-3 font-medium tracking-tight text-gray-700 focus:border-accent focus:outline-none"
                 />
@@ -121,8 +124,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-0 bg-gray-200" />
+        <hr className="my-16 h-0.5 border-0 bg-gray-200" />
         <Features />
+        <Footer email={email} setEmail={setEmail} />
       </div>
     </>
   );

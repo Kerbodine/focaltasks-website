@@ -3,7 +3,8 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div className="mb-32">
+    <div className="relative mb-32">
+      <div className="absolute -top-12" id="features"></div>
       <h2 className="text-3xl font-bold leading-8 tracking-tight md:text-4xl">
         A wide range of features, <br />
         <span className="opacity-50">Both familiar and new.</span>
