@@ -46,7 +46,7 @@ const navigation = {
   ],
 };
 
-export default function Footer({ email, setEmail }) {
+export default function Footer({ email, setEmail, handleSubmit }) {
   return (
     <footer className="w-full rounded-t-2xl border-2 border-b-0 border-gray-200">
       <h2 id="footer-heading" className="sr-only">
@@ -77,7 +77,7 @@ export default function Footer({ email, setEmail }) {
             <p className="leading-5 text-gray-500">
               We respect your inbox, no spam guaranteed
             </p>
-            <form className="mt-4 sm:flex sm:max-w-md">
+            <form className="mt-4 sm:flex sm:max-w-md" onSubmit={handleSubmit}>
               <input
                 type="email"
                 autoComplete="email"

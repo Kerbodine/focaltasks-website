@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Image from "next/image";
 import { useState } from "react";
 import { BiCheck, BiLoaderAlt } from "react-icons/bi";
@@ -10,6 +10,7 @@ import Features from "../components/Features";
 import Script from "next/script";
 import Footer from "../components/Footer";
 import FAQ from "../components/Faq";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -125,10 +126,11 @@ export default function Home() {
             />
           </div>
         </div>
-        <hr className="my-16 h-0.5 border-0 bg-gray-200" />
+        <hr className="my-8 h-0.5 border-0 bg-gray-200" />
+        {/* <Testimonials /> */}
         <Features />
         <FAQ />
-        <Footer email={email} setEmail={setEmail} />
+        <Footer email={email} setEmail={setEmail} handleSubmit={handleSubmit} />
       </div>
     </>
   );
