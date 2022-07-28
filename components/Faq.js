@@ -9,17 +9,17 @@ const questions = [
   {
     question: "Is FocalTasks free?",
     answer:
-      "FocalTasks is free to use and is open source. You can use it for free on your own or you can sign up for a free account.",
+      "FocalTasks is open source and will be free for everyone to use. We hope you enjoy it!",
   },
   {
     question: "How is this different from other productivity apps?",
     answer:
-      "FocalTasks is focused on bring a lightweight yet feature rich todo-list that is intuitive and joyful to use. It is also easy to share with your team.",
+      "FocalTasks is focused on bring a lightweight yet feature rich todo-list that is intuitive and joyful to use. Collaboration features also allows for easy task sharing with your team.",
   },
   {
     question: "When can I start using the app?",
     answer:
-      "The public beta is open to everyone. We are currently working on a private beta, but we will release it soon. Join the waiting list to get notified when it is released.",
+      "The public beta is open to everyone. We are currently working on a private beta, but we will release it soon. Join the waiting list to get notified when it is released!",
   },
 ];
 

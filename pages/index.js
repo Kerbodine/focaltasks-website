@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
 import { BiCheck, BiLoaderAlt } from "react-icons/bi";
@@ -68,7 +68,7 @@ export default function Home() {
       <div className="mx-auto mt-16 w-full max-w-6xl px-6 md:px-8">
         <div className="flex flex-col items-center gap-4 md:gap-0 lg:flex-row">
           <div className="mx-auto flex flex-col items-center text-center lg:basis-2/5 lg:items-start lg:text-left">
-            <div className="-ml-1 mb-8 hidden rounded-md bg-white leading-5 ring-2 ring-gray-200 sm:inline-flex">
+            <div className="-ml-1 mb-8 flex truncate rounded-md bg-white leading-5 ring-2 ring-gray-200">
               <span className="inline-flex gap-2 p-1.5">
                 <span className="-m-0.5 flex items-center rounded-md bg-accent px-1.5 text-xs font-semibold text-white">
                   BETA
@@ -130,7 +130,13 @@ export default function Home() {
         {/* <Testimonials /> */}
         <Features />
         <FAQ />
-        <Footer email={email} setEmail={setEmail} handleSubmit={handleSubmit} />
+        <Footer
+          email={email}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}
+          loading={loading}
+          submitEmail={submitEmail}
+        />
       </div>
     </>
   );

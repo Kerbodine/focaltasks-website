@@ -6,7 +6,7 @@ export default function Features() {
     <div className="relative my-16">
       <div className="absolute -top-12" id="features"></div>
       <h2 className="text-3xl font-semibold leading-8 tracking-tight opacity-60 md:text-4xl">
-        Meet your new favorite todo list app.
+        Meet your new favorite todo-list app.
       </h2>
       <div className="feature-grid mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="col-span-1 overflow-hidden rounded-2xl border-2 border-gray-200">

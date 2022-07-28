@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 
 const navigation = {
   social: [
@@ -46,7 +47,13 @@ const navigation = {
   ],
 };
 
-export default function Footer({ email, setEmail, handleSubmit }) {
+export default function Footer({
+  email,
+  setEmail,
+  handleSubmit,
+  loading,
+  submitEmail,
+}) {
   return (
     <footer className="w-full rounded-t-2xl border-2 border-b-0 border-gray-200">
       <h2 id="footer-heading" className="sr-only">
@@ -90,9 +97,15 @@ export default function Footer({ email, setEmail, handleSubmit }) {
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center rounded-lg bg-accent px-3 py-2.5 font-medium text-white transition-colors hover:bg-accent/80"
+                  className="flex h-11 w-28 items-center justify-center rounded-lg bg-accent font-medium text-white transition-colors hover:bg-accent/80"
                 >
-                  Join waitlist
+                  {loading ? (
+                    <BiLoaderAlt className="animate-spin text-2xl" />
+                  ) : submitEmail ? (
+                    <BiCheck className="text-4xl" />
+                  ) : (
+                    <p>Join Waitlist</p>
+                  )}
                 </button>
               </div>
             </form>
