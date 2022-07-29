@@ -26,10 +26,10 @@ const questions = [
 export default function FAQ() {
   return (
     <div className="my-16 w-full">
-      <h2 className="text-3xl font-semibold leading-8 tracking-tight opacity-60 md:text-4xl">
+      <h2 className="text-3xl font-semibold leading-8 tracking-tighter opacity-60 md:text-4xl">
         Frequently Asked Questions:
       </h2>
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         {questions.map((question, index) => (
           <div key={index} className="col-span-1">
             <div className="h-full rounded-2xl border-2 border-gray-200 p-4 sm:p-6">
