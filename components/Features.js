@@ -5,9 +5,14 @@ export default function Features() {
   return (
     <div className="relative my-16">
       <div className="absolute -top-12" id="features"></div>
-      <h2 className="text-3xl font-semibold leading-8 tracking-tighter opacity-60 md:text-4xl">
-        Meet your new favorite todo-list app.
-      </h2>
+      <header>
+        <p className="mb-2 text-xl font-medium leading-6 tracking-tight text-black/40 md:text-2xl md:leading-7 lg:mb-0">
+          Forget about the boring notepad, sticky notes, or emails.
+        </p>
+        <h2 className="text-3xl font-semibold leading-8 tracking-tighter opacity-60 md:text-4xl">
+          A More Modern Approach To Task Management
+        </h2>
+      </header>
       <div className="feature-grid mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="col-span-1 overflow-hidden rounded-2xl border-2 border-gray-200">
           <Image

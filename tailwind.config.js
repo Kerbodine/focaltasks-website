@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -8,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        gray: colors.zinc,
         accent: ({ opacityValue }) => {
           if (opacityValue !== undefined) {
             return `rgba(var(--accent), ${opacityValue})`;

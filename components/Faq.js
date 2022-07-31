@@ -25,7 +25,8 @@ const questions = [
 
 export default function FAQ() {
   return (
-    <div className="my-16 w-full">
+    <div className="relative my-16 w-full">
+      <div className="absolute -top-12" id="faq"></div>
       <h2 className="text-3xl font-semibold leading-8 tracking-tighter opacity-60 md:text-4xl">
         Frequently Asked Questions:
       </h2>

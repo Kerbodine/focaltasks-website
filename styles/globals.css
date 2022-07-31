@@ -17,3 +17,7 @@
 .feature-grid div {
   @apply hover:shadow-xl hover:border-accent shadow-none transition-all hover:scale-[1.025];
 }
+
+.navbar-item {
+  @apply px-3 py-2 hover:bg-gray-100 cursor-pointer rounded-lg font-medium text-gray-700;
+}
