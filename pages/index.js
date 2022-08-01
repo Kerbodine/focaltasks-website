@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
-import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { app } from "../config/firebase";
 import { nanoid } from "nanoid";
@@ -75,7 +74,7 @@ export default function Home() {
                   BETA
                 </span>
                 <span className="text-sm font-medium tracking-tight text-gray-700">
-                  FocalTasks is currently in private beta.
+                  FocalTasks is in public beta!
                 </span>
               </span>
             </div>
