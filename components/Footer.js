@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiCheck, BiLoaderAlt } from "react-icons/bi";
 
 const navigation = {
   social: [
@@ -47,13 +46,7 @@ const navigation = {
   ],
 };
 
-export default function Footer({
-  email,
-  setEmail,
-  handleSubmit,
-  loading,
-  submitEmail,
-}) {
+export default function Footer() {
   return (
     <footer className="w-full rounded-t-2xl border-2 border-b-0 border-gray-200">
       <h2 id="footer-heading" className="sr-only">
@@ -77,66 +70,33 @@ export default function Footer({
               </p>
             </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold tracking-tight text-gray-700">
-              Join the waitlist:
-            </h3>
-            <p className="leading-5 text-gray-500">
-              We respect your inbox, no spam guaranteed
-            </p>
-            <form className="mt-4 sm:flex sm:max-w-md" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex h-min w-full min-w-0 rounded-lg border-2 border-gray-200 px-3 py-2 font-medium tracking-tight text-gray-700 focus:border-accent focus:outline-none"
-                placeholder="Enter your email"
-              />
-              <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  className="flex h-11 w-28 items-center justify-center rounded-lg bg-accent font-medium text-white transition-colors hover:bg-accent/80"
+          <div className="mt-auto flex flex-col">
+            <div className="mb-4 ml-auto flex space-x-4">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-400 hover:text-gray-500"
                 >
-                  {loading ? (
-                    <BiLoaderAlt className="animate-spin text-2xl" />
-                  ) : submitEmail ? (
-                    <BiCheck className="text-4xl" />
-                  ) : (
-                    <p>Join Waitlist</p>
-                  )}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div className="mt-12 flex flex-col justify-between gap-4 border-t-2 border-gray-200 pt-8 sm:flex-row">
-          <div className="text-gray-500">
-            <p className="xl:text-center">
-              &copy; {new Date().getFullYear()} FocalTasks, Inc. All rights
-              reserved.
-            </p>
-            <p>
-              Website created by{" "}
-              <Link href="https://www.michaelytong.com/">
-                <span className="cursor-pointer font-medium underline underline-offset-1 hover:text-accent">
-                  Michael Tong
-                </span>
-              </Link>
-            </p>
-          </div>
-          <div className="flex space-x-6">
-            {navigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+            <div className="text-right text-gray-500">
+              <p className="xl:text-center">
+                &copy; {new Date().getFullYear()} FocalTasks, Inc. All rights
+                reserved.
+              </p>
+              <p>
+                Website created by{" "}
+                <Link href="https://www.michaelytong.com/">
+                  <span className="cursor-pointer font-medium underline underline-offset-1 hover:text-accent">
+                    Michael Tong
+                  </span>
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

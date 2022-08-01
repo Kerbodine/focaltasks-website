@@ -110,13 +110,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         <Features />
         <FAQ />
-        <Footer
-          email={email}
-          setEmail={setEmail}
-          handleSubmit={handleSubmit}
-          loading={loading}
-          submitEmail={submitEmail}
-        />
+        <Footer />
       </div>
     </>
   );
