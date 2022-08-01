@@ -1,10 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import { useState } from "react";
-import { doc, getFirestore, setDoc } from "firebase/firestore";
-import { app } from "../config/firebase";
-import { nanoid } from "nanoid";
 import Features from "../components/Features";
 import Script from "next/script";
 import Footer from "../components/Footer";
@@ -13,19 +9,6 @@ import Testimonials from "../components/Testimonials";
 import Link from "next/link";
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [submitEmail, setSubmitEmail] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setSubmitEmail(true);
-    await setDoc(doc(getFirestore(app), "Emails", nanoid()), { email: email });
-    setLoading(false);
-    setEmail("");
-  };
-
   return (
     <>
       <Head>
@@ -73,7 +56,7 @@ export default function Home() {
                 <span className="-m-0.5 flex items-center rounded-md bg-accent px-1.5 text-xs font-semibold text-white">
                   BETA
                 </span>
-                <span className="text-sm font-medium tracking-tight text-gray-700">
+                <span className="text-sm font-medium text-gray-700">
                   FocalTasks is in public beta!
                 </span>
               </span>

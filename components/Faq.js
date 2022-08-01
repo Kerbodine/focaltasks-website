@@ -1,11 +1,11 @@
 import React from "react";
 
 const questions = [
-  {
-    question: "What is FocalTasks?",
-    answer:
-      "FocalTasks is a productivity suite that helps you create to-do lists, share tasks, and level up your productivity.",
-  },
+  // {
+  //   question: "What is FocalTasks?",
+  //   answer:
+  //     "FocalTasks is a productivity suite that helps you create to-do lists, share tasks, and level up your productivity.",
+  // },
   {
     question: "Is FocalTasks free?",
     answer:
@@ -16,11 +16,11 @@ const questions = [
     answer:
       "FocalTasks is focused on bring a lightweight yet feature rich todo-list that is intuitive and joyful to use. Collaboration features also allows for easy task sharing with your team.",
   },
-  {
-    question: "When can I start using the app?",
-    answer:
-      "The public beta is open to everyone. We are currently working on a private beta, but we will release it soon. Join the waiting list to get notified when it is released!",
-  },
+  // {
+  //   question: "When can I start using the app?",
+  //   answer:
+  //     "The public beta is open to everyone. We are currently working on a private beta, but we will release it soon. Join the waiting list to get notified when it is released!",
+  // },
 ];
 
 export default function FAQ() {

@@ -70,7 +70,7 @@ export default function Features() {
         </div>
       </div>
       <h2 className="mt-12 text-3xl font-semibold leading-8 tracking-tighter opacity-60 md:text-4xl">
-        And theres even more...
+        And there&apos;s even more...
       </h2>
       <div className="feature-grid mt-6 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
         <div className="overflow-hidden rounded-2xl border-2 border-gray-200">
