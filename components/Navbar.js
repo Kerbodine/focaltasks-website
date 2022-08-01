@@ -45,10 +45,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="h-8 w-0.5 bg-gray-200"></div>
-              <Link href="/login">
+              <Link href="https://app.focaltasks.com/login">
                 <div className="navbar-item">Log in</div>
               </Link>
-              <Link href="/signup">
+              <Link href="https://app.focaltasks.com/signup">
                 <div className="cursor-pointer rounded-lg border-2 border-accent py-1.5 px-3 font-medium text-accent transition-colors hover:bg-accent hover:text-white">
                   Sign up
                 </div>
